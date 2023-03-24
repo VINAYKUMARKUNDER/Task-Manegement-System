@@ -40,7 +40,7 @@ public class User {
     private String password;
     
     @Column(columnDefinition = "VARCHAR(255) DEFAULT 'images/user.png'")
-    private String photo;
+    private String picture;
     
     @OneToMany(mappedBy = "owner", cascade = CascadeType.PERSIST)
     private List<Task> tasksOwned;
