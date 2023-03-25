@@ -7,11 +7,11 @@
 		<version>2.1.5.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>pl.rengreen</groupId>
-	<artifactId>task-manager</artifactId>
+	<groupId>com.vinay</groupId>
+	<artifactId>Task-Manegement-Application-System</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>task-manager</name>
-	<description>Spring Boot application for task management</description>
+	<name>Task-Manegement-Application-System</name>
+	<description>Task-Manegement-Application-System</description>
 
 	<properties>
 		<java.version>1.8</java.version>
