@@ -12,10 +12,13 @@ import com.vinay.service.UserService;
 
 @Controller
 public class UserController {
-	@Autowired
+
     private UserService userService;
 
-    
+    @Autowired
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping("/users")
     public String listUsers(Model model, SecurityContextHolderAwareRequestWrapper request) {

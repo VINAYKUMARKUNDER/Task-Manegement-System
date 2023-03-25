@@ -1,20 +1,21 @@
 package com.vinay.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.vinay.model.Role;
 import com.vinay.repository.RoleRepository;
 
+import java.util.List;
+
 @Service
 public class RoleServiceImpl implements RoleService {
-	
-	@Autowired
-	private RoleRepository roleRepository;
+    private RoleRepository roleRepository;
 
-    
+    @Autowired
+    public RoleServiceImpl(RoleRepository roleRepository) {
+        this.roleRepository = roleRepository;
+    }
 
     @Override
     public Role createRole(Role role) {
@@ -25,5 +26,5 @@ public class RoleServiceImpl implements RoleService {
     public List<Role> findAll() {
         return roleRepository.findAll();
     }
-
 }
+

@@ -1,12 +1,12 @@
 package com.vinay.service;
 
-import java.util.List;
 
 import com.vinay.model.Role;
 
+import java.util.List;
+
 public interface RoleService {
-	Role createRole(Role role);
+    Role createRole(Role role);
 
     List<Role> findAll();
-
 }
