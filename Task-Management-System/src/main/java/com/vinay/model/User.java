@@ -16,8 +16,9 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
-import org.hibernate.validator.constraints.Length;
+
 
 
 
@@ -36,7 +37,7 @@ public class User {
     @NotEmpty(message = "{user.name.not.empty}")
     private String name;
     @NotEmpty(message = "{user.password.not.empty}")
-    @Length(min = 5, message = "{user.password.length}")
+    @Size(min = 5, message = "{user.password.Size}")
     private String password;
     @Column(columnDefinition = "VARCHAR(255) DEFAULT 'images/user.png'")
     private String photo;
@@ -71,7 +72,7 @@ public class User {
 
     public User(@Email @NotEmpty String email,
                 @NotEmpty String name,
-                @NotEmpty @Length(min = 5) String password,
+                @NotEmpty @Size(min = 5) String password,
                 String photo) {
         this.email = email;
         this.name = name;
@@ -81,7 +82,7 @@ public class User {
 
     public User(@Email @NotEmpty String email,
                 @NotEmpty String name,
-                @NotEmpty @Length(min = 5) String password,
+                @NotEmpty @Size(min = 5) String password,
                 String photo,
                 List<Task> tasksOwned,
                 List<Role> roles) {
